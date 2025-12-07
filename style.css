@@ -91,60 +91,60 @@ body{
 }
 
 
-        .calculator-div::after, .calculator-div::before {
-            --angle:0deg;
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-            background-image: conic-gradient(from var(--angle), rgb(255, 136, 0), transparent, transparent, rgb(255, 136, 0),transparent, transparent, rgb(255, 136, 0));
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            animation-name: rotate-border;
-            animation-duration: 5s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            padding:4px;
-        }
-        .calculator-div::before {
-            filter: blur(21px);
-            opacity: 0.5;
-        }
-        .glow-static {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 180%;
-            height: 180%;
-            border-radius: 50%;
-            background: radial-gradient(circle, orange, yellow 60%, transparent 80%);
-            transform: translate(-50%, -50%);
-            z-index: -2;
-            filter: blur(700px);
-            opacity: 0.5;
-        }
+.calculator-div::after, .calculator-div::before {
+    --angle:0deg;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-image: conic-gradient(from var(--angle), rgb(255, 136, 0), transparent, transparent, rgb(255, 136, 0),transparent, transparent, rgb(255, 136, 0));
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    animation-name: rotate-border;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    padding:4px;
+}
+.calculator-div::before {
+    filter: blur(21px);
+    opacity: 0.5;
+}
+.glow-static {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180%;
+    height: 180%;
+    border-radius: 50%;
+    background: radial-gradient(circle, orange, yellow 60%, transparent 80%);
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    filter: blur(700px);
+    opacity: 0.5;
+}
 
 
-        
-        @property --angle {
-            syntax: "<angle>";
-            initial-value: 0deg;
-            inherits: false;
-        }
 
-        @keyframes rotate-border {
-            0% { --angle: 0deg; }
-            50% { --angle: 180deg; }
-            100% { --angle: 360deg; }
-        }
-        @media only screen and (maxwidth=435px){
-            .glow-static{
-                opacity: 0.2;
-            }
-        }
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate-border {
+    0% { --angle: 0deg; }
+    50% { --angle: 180deg; }
+    100% { --angle: 360deg; }
+}
+@media only screen and (max-width: 435px){
+    .glow-static{
+        opacity: 0.2;
+    }
+}
 
 
 
