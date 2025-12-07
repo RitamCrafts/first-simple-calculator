@@ -140,6 +140,11 @@ body{
             50% { --angle: 180deg; }
             100% { --angle: 360deg; }
         }
+        @media only screen and (maxwidth=435px){
+            .glow-static{
+                opacity: 0.2px;
+            }
+        }
 
 
 
