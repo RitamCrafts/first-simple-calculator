@@ -19,7 +19,9 @@ body{
     align-items: center;
     flex-direction: column;
     border-radius: 8px;
+    position: relative;
 }
+
 .gridder{
     display:grid;
     grid-template-columns: repeat(3, 50px);
@@ -86,3 +88,57 @@ body{
     row-gap:12px;
     margin-left: 12px;
 }
+
+
+        .calculator-div::after, .calculator-div::before {
+            --angle:0deg;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-image: conic-gradient(from var(--angle), red, yellow, lime, blue, magenta, red);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation-name: rotate-border;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            padding:3px;
+        }
+        .calculator-div::before {
+            filter: blur(21px);
+            opacity: 0.5;
+        }
+        .glow-static {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 180%;
+            height: 180%;
+            border-radius: 50%;
+            background: radial-gradient(circle, orange, yellow 60%, transparent 80%);
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            filter: blur(500px);
+            opacity: 0.5;
+        }
+
+
+        
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes rotate-border {
+            0% { --angle: 0deg; }
+            50% { --angle: 180deg; }
+            100% { --angle: 360deg; }
+        }
+
+
+
