@@ -1,0 +1,88 @@
+
+body{
+    background-color: rgb(0, 0, 0);
+    margin:0;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+
+}
+
+.calculator-div{
+    display:flex;
+    width:fit-content;
+    padding:16px;
+    background-color: rgb(33, 33, 33);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.gridder{
+    display:grid;
+    grid-template-columns: repeat(3, 50px);
+    column-gap: 12px;
+    row-gap: 12px;
+    justify-content: center;
+}
+.circular-button-orange, .circular-button-grey, .circular-button-normal{
+    color:white;
+    background-color: rgb(44, 44, 44);
+    border:none;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+
+}
+.circular-button-grey{
+    background-color: rgb(50, 25, 16)
+}
+.circular-button-orange{
+    background-color: orangered
+}
+.circular-button-orange:hover, .circular-button-grey:hover, .circular-button-normal:hover{
+    opacity: 0.8;
+}
+.circular-button-orange:active, .circular-button-grey:active, .circular-button-normal:active{
+    opacity: 0.5;
+}
+
+#display-bar{
+    width: 245px;
+    border:1px solid salmon;
+    background-color: rgb(66, 66, 66);
+    height:50px;
+    margin-bottom: 18px;
+    color: white;
+    border-radius: 6px;
+    outline:0;
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+#display-bar::placeholder{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+
+.all-buttons{
+    display:flex;
+    padding: 0px 4px;
+
+}
+.side-buttons{
+    display:flex;
+    flex-direction: column;
+    row-gap:12px;
+    margin-left: 12px;
+}

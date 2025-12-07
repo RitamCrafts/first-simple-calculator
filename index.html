@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="calculator-div">
+        <input type="text" readonly="true" id="display-bar" placeholder="0">
+        <div class="all-buttons">
+            <div class="gridder">
+                <button class="circular-button-grey" onclick="appendSign('(')">(</button>
+                <button class="circular-button-grey" onclick="appendSign(')')">)</button>
+                <button class="circular-button-grey" onclick="backspace()">&lt;-</button>
+                <button class="circular-button-normal" onclick="appendSign('1')">1</button>
+                <button class="circular-button-normal" onclick="appendSign('2')">2</button>
+                <button class="circular-button-normal" onclick="appendSign('3')">3</button>
+                <button class="circular-button-normal" onclick="appendSign('4')">4</button>
+                <button class="circular-button-normal" onclick="appendSign('5')">5</button>
+                <button class="circular-button-normal" onclick="appendSign('6')">6</button>
+                <button class="circular-button-normal" onclick="appendSign('7')">7</button>
+                <button class="circular-button-normal" onclick="appendSign('8')">8</button>
+                <button class="circular-button-normal" onclick="appendSign('9')">9</button>
+                <button class="circular-button-normal" onclick="appendSign('.')">.</button>
+                <button class="circular-button-normal" onclick="appendSign('0')">0</button>
+                <button class="circular-button-orange" onclick="allClear()">AC</button>
+            </div>
+            <div class="side-buttons">
+                <button class="circular-button-orange" onclick="evaluateDisplay()">=</button>
+                <button class="circular-button-orange" onclick="appendSign('+')">+</button>
+                <button class="circular-button-orange" onclick="appendSign('-')">-</button>
+                <button class="circular-button-orange" onclick="appendSign('*')">&times;</button>
+                <button class="circular-button-orange" onclick="appendSign('/')">&divide;</button>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
